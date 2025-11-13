@@ -30,4 +30,5 @@ Certifications
 Connect
 
 Email: antdeangelis2@gmail.com￼
+
 LinkedIn: linkedin.com/in/anthony-deangelis
