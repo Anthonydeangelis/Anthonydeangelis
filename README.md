@@ -14,15 +14,11 @@ I build hands-on labs that connect infrastructure, identity, and detection: depl
 - Built a Python SDK workflow that inspects NSG rules for unrestricted-source inbound SSH, saves current findings in Table Storage, and sends structured detection events through a Data Collection Rule to Sentinel.
 - Connected configuration-change alerts to a Logic App with a 30-minute grace period; verified an ingested finding and Sentinel incident in a controlled test. Added a private findings dashboard with Azure tokens kept on the VM backend.
 
-This extends the infrastructure lab below. It evaluates configuration risk; it does not automatically remediate rules or establish live network reachability.
-
 ### [Entra ID & Azure Automation](https://github.com/Anthonydeangelis/Entra-PowerShell-Automation-Project)
 **PowerShell · Microsoft Graph · Azure Automation · Key Vault · GitHub Actions OIDC**
 
 - Automated CSV-based Entra user provisioning and department security-group membership. Recorded results show **25 lab users created, six department groups populated, and 26 direct user memberships verified**, including my existing account.
 - Used a runbook managed identity for Graph, Blob Storage, and Key Vault access; deployed runbooks through GitHub Actions with OIDC and explicit PowerShell runtime selection.
-
-The public repository includes sanitized runbooks, permission documentation, verification output, and validation checks. Live deployment is maintained separately in a private repository.
 
 ### [Azure Infrastructure & Security Lab](https://github.com/Anthonydeangelis/Azure-Infra-Security-Lab)
 **Terraform · Ansible · Azure Monitor · KQL · Microsoft Sentinel · Logic Apps**
