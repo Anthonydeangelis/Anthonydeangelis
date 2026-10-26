@@ -1,27 +1,52 @@
 # Anthony DeAngelis
 
-Cloud Security | Identity & Access Management | Automation
+**Cloud Security | Identity & Access Management | Security Automation**
 
-I am an Information Technology student @St. Francis College and  a Network Operations / Security Operations Intern at Willkie Farr & Gallagher where I do windows admin work, monitor and investigate security alerts, and work on various projects. I build practical cloud, identity, networking, and security-operations skills through enterprise work and hands-on labs. My focus is securing Azure environments, applying least privilege, automating repeatable infrastructure, and improving detection and response.
+I am a Network Operations / Security Operations Intern at **Willkie Farr & Gallagher LLP** and an Information Technology student at **St. Francis College**, graduating in **May 2027**. My work spans Windows Server and Active Directory administration, PowerShell automation, SIEM investigations, phishing analysis, and vulnerability remediation.
 
-## Focus areas
+I build hands-on labs that connect infrastructure, identity, and detection: deploy the environment, control access, collect telemetry, test the behavior, and document the results. My current focus is Azure security, Microsoft Entra ID, and automation with Python, PowerShell, Terraform, and GitHub Actions.
 
-- Azure security and identity: Entra ID, Azure RBAC, Azure Policy, Microsoft Sentinel, and SC-300-aligned IAM practices
-- Infrastructure as code and automation: Terraform, Bicep, GitHub Actions, PowerShell, Bash, Python, and KQL
-- Secure networking: VNets, NSGs, UDRs, hub-and-spoke design, Azure Firewall, VPN, DNS, DHCP, and Active Directory
-- Security operations: SIEM investigations, phishing analysis, vulnerability remediation, incident documentation, and SOAR automation
+## Featured projects
 
-## Featured Projects
+### [Azure NSG Security Automation](https://github.com/Anthonydeangelis/azure-nsg-security-automation)
+**Python · Azure Functions · Terraform · Microsoft Sentinel · Managed Identity**
 
-###  [Azure Cloud Security Lab](https://github.com/Anthonydeangelis/hybridhomelab)
-An enterprise-style homelab that demonstrates how on-premises Active Directory, Microsoft Entra ID, private application access, Windows and Linux administration, centralized monitoring, and infrastructure as code fit together. Core services run on a private Proxmox network. Selected identities synchronize to Microsoft Entra ID, approved users reach an internal application through Entra Application Proxy, and Windows and Linux events are collected and tested with Wazuh.
+- Built a Python SDK workflow that inspects NSG rules for unrestricted-source inbound SSH, saves current findings in Table Storage, and sends structured detection events through a Data Collection Rule to Sentinel.
+- Connected configuration-change alerts to a Logic App with a 30-minute grace period; verified an ingested finding and Sentinel incident in a controlled test. Added a private findings dashboard with Azure tokens kept on the VM backend.
 
+This extends the infrastructure lab below. It evaluates configuration risk; it does not automatically remediate rules or establish live network reachability.
 
-### [Azure Enterprise HomeLab](https://github.com/Anthonydeangelis/Azure_AD_Linux_Terraform-Project)
-A fully automated, Infrastructure-as-Code Azure homelab simulating a real corporate network environment. Built to develop hands-on skills in cloud networking, Active Directory administration, Linux systems management, and DevOps practices.
+### [Entra ID & Azure Automation](https://github.com/Anthonydeangelis/Entra-PowerShell-Automation-Project)
+**PowerShell · Microsoft Graph · Azure Automation · Key Vault · GitHub Actions OIDC**
 
-### [Sentinel Project](https://github.com/Anthonydeangelis/Azure-Microsoft-Sential-Lab)
-Simulate a real world attacks and threat response via Microsoft Sentinel. 
+- Automated CSV-based Entra user provisioning and department security-group membership. Recorded results show **25 lab users created, six department groups populated, and 26 direct user memberships verified**, including my existing account.
+- Used a runbook managed identity for Graph, Blob Storage, and Key Vault access; deployed runbooks through GitHub Actions with OIDC and explicit PowerShell runtime selection.
+
+The public repository includes sanitized runbooks, permission documentation, verification output, and validation checks. Live deployment is maintained separately in a private repository.
+
+### [Azure Infrastructure & Security Lab](https://github.com/Anthonydeangelis/Azure-Infra-Security-Lab)
+**Terraform · Ansible · Azure Monitor · KQL · Microsoft Sentinel · Logic Apps**
+
+- Provisioned **five Ubuntu VMs across two peered VNets**, configured Nginx and Unbound DNS, and verified private workload access and web-tier network restrictions.
+- Built detections for NSG changes, repeated invalid-user SSH activity, and a controlled DNS reputation scenario enriched with VirusTotal. Verified alert-backed incidents and automatic email notifications for all three.
+- Implemented GitHub Actions deployment with OIDC, remote Terraform state, and a reviewed, manually triggered saved-plan apply workflow.
+
+### [Hybrid Identity & Security Homelab](https://github.com/Anthonydeangelis/hybridhomelab)
+**Proxmox · Active Directory · Entra Connect · Application Proxy · Conditional Access · Wazuh**
+
+- Built a private Windows/Linux environment with scoped AD-to-Entra synchronization, group-based SMB permissions, and an internal Nginx application published through Entra Application Proxy with MFA.
+- Centralized telemetry from **five Wazuh agents** and tested detections for AD account/group changes, Entra Connect service interruptions, repeated SMB authentication failures, and sudo activity.
+
+Each featured repository includes implementation notes, screenshots or verification output, troubleshooting, and scope limitations. These are learning environments with controlled lab tests.
+
+## Technical skills
+
+| Area | Tools and experience |
+| --- | --- |
+| Cloud & infrastructure | Azure, Terraform, Ansible, GitHub Actions, VNets, peering, NSGs, DNS, Windows Server, Linux, Proxmox |
+| Identity & access | Active Directory, Microsoft Entra ID, Entra Connect, Application Proxy, Conditional Access, MFA, Microsoft Graph, Azure RBAC, managed identities |
+| Security operations | IBM QRadar, CrowdStrike Falcon Next-Gen SIEM, Microsoft Sentinel, Wazuh, Proofpoint, Abnormal AI, Mimecast, Zscaler, Qualys |
+| Automation & workflow | PowerShell, Python, Bash, KQL, Logic Apps, Azure Automation, Zendesk, ServiceNow |
 
 ## Certifications
 
@@ -33,5 +58,4 @@ Simulate a real world attacks and threat response via Microsoft Sentinel.
 
 ## Connect
 
-- [LinkedIn](https://www.linkedin.com/in/anthony-deangelis/)
-- Email: antdeangelis2@gmail.com
+[LinkedIn](https://www.linkedin.com/in/anthony-deangelis/) · [Email](mailto:antdeangelis2@gmail.com)
